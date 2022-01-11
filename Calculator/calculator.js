@@ -6,6 +6,11 @@ app.get("/",function(req,res)
 {
   res.sendFile(__dirname + "/index.html");
 });
+
+app.post("/", function(req,res)//to handle post requests
+{
+  res.send("thanks for posting that");
+})
 function callBack()
 {
   console.log("Server is running");
