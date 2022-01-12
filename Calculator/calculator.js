@@ -12,9 +12,11 @@ app.get("/",function(req,res)
 
 app.post("/", function(req,res)//to handle post requests
 {
-  console.log(req.body);
+  var num1=Number(req.body.num1);//it gets passed on as text so we convert to numbers
+  var num2=Number(req.body.num2);
+  var result=num1 + num2;
 
-  res.send("thanks for posting that");
+  res.send("The sum is " + result);
 });
 
 function callBack()
